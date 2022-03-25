@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-card{
+  max-width: 355px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 20px 30px 30px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  .logo-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img{
+      height: 60px;
+      width: 60px;
+      object-fit: cover;
+    }
+    i{
+      font-size: 27px;
+      color: #707070;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      &:hover{
+        color: #333;
+      }
+    }
+  }
+  .main-images{
+    position: relative;
+    height: 210px;
+    img{
+      position: absolute;
+      height: 300px;
+      width: 300px;
+      object-fit: cover;
+      transform: rotate(18deg);
+      left: 12px;
+      top: -40px;
+      z-index: -1;
+    }
+  }
+  .shoe-details{
+    .shoe_name{
+      font-size: 24px;
+      font-weight: 500;
+      color: #161616;
+    }
+    p{
+      font-size: 12px;
+      font-weight: 400;
+      color: #333;
+      text-align: justify;
+    }
+    .stars{
+      i{
+        margin: 0 -1px;
+        color: #333;
+      }
+    }
+  }
+  .color-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .color-option{
+      display: flex;
+      align-items: center;
+      .color{
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+        margin-right: 8px;
+      }
+      .circles{
+        display: flex;
+        .circle{
+          height: 18px;
+          width: 18px;
+          background: #0071c7;
+          border-radius: 50%;
+          margin: 0 4px;
+          
+        }
+        .circle.blue.active{
+          box-shadow: 0 0 0 2px #fff,
+                       0 0 0 4px #0071c7;
+       }
+      }
+    }
+    .price{
+      display: flex;
+      flex-direction: column;
+      .price_num{
+        font-size: 25px;
+        font-weight: 600;
+        color: #707070;
+      }
+      .price_letter{
+        font-size: 10px;
+        font-weight: 600;
+        margin-top: -4px;
+        color: #707070;
+      }
+    }
+  }
+}
